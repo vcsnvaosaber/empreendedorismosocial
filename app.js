@@ -29,13 +29,14 @@ ui.start('#firebaseui-auth-container', {
 });
 
 firebase.auth().onAuthStateChanged(function(user) {
-	const loader = document.getElementById('loader');
-	if (user) {
-		loader.style.display = 'none';
-		initApp();
-	} else {
-		loader.style.display = 'block';
-	}
+console.log('onAuthStateChanged', user);
+  const loader = document.getElementById('loader');
+  if (user) {
+    loader.style.display = 'none';
+    initApp();
+  } else {
+    loader.style.display = 'block';
+  }
 });
 
 function initApp() {
