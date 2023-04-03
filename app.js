@@ -17,13 +17,6 @@ const firebaseConfig = {
 
 };
 
-
-// Initialize Firebase
-
-const app = initializeApp(firebaseConfig);
-
-const analytics = getAnalytics(app);};
-
 firebase.initializeApp(firebaseConfig);
 
 const ui = new firebaseui.auth.AuthUI(firebase.auth());
